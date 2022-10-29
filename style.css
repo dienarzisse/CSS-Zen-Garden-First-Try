@@ -34,6 +34,7 @@ body {
 	grid-template-areas: 
 	'header header header'
 	'main main sidebar'
+	'footer footer footer'
 	;
 	grid-auto-rows: minmax(min-content, max-content);
 	grid-auto-columns: minmax(min-content, max-content);
@@ -151,7 +152,6 @@ h3{
 
 .main.supporting{
 	border-radius: 10px;
-	grid-area: supporting;
 	grid-area: main;
 	padding: 0 1vw 3vw 1vw;
 	height: 100%;
@@ -225,7 +225,6 @@ h3{
 	text-align: left;
 	height: auto;
 	border-radius: 10px;
-	grid-area: design;
 	flex-grow: 1;
 	color: rgb(117, 124, 168);
 	
@@ -233,7 +232,7 @@ h3{
 
 .design-selection h3:before{
 	content: "";
-	background-image: url(resources/sidebar-icon3.svg);
+	background-image: url("resources/sidebar-icon3.svg");
 	background-size: 100% 100%;
 	padding: 4vh 4vh;
 	margin-right:1vw;
@@ -264,7 +263,7 @@ h3{
 }
 .design-archives h3:before{
 	content: "";
-	background-image: url(resources/sidebar-icon1.svg);
+	background-image: url("resources/sidebar-icon1.svg");
 	background-size: 100% 100%;
 	padding: 4vh 4vh;
 	margin-right:1vw;
@@ -293,7 +292,7 @@ h3{
 
 .zen-resources h3:before{
 	content: "";
-	background-image: url(resources/sidebar-icon2.svg);
+	background-image: url("resources/sidebar-icon2.svg");
 	background-size: 100% 100%;
 	padding: 4vh 4vh;
 	margin-right:1vw;
@@ -323,6 +322,7 @@ footer{
 	text-align: center;
 	top: 1vw;
 	margin-top: 10vh;
+	grid-area: footer;
 }
 
 /* replacing the text with icons on the navigation bar */
@@ -423,10 +423,25 @@ footer{
 @media only screen and (max-width: 800px){
 	.page-wrapper{
 		display: block;
+		padding: 2rem;
 	}
+
 	.sidebar{
 		grid-column: 1;
 		grid-row: 3;
 		margin-bottom: 7vh;
 	}
+
+	.zen-validate-html, .zen-validate-css, .zen-license, 
+.zen-accessibility, .zen-github {
+
+	width: 8vw;
+	height: 8vw;;
+
+}
+
+.page-wrapper:after{
+	display:none;
+}
+
 }
