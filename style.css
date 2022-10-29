@@ -1,0 +1,432 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	padding: 0;
+	background: #fff;
+	color: #000;
+	font: normal normal normal 12px/1.5em "Lucida Grande", Verdana, sans-serif;
+	background-image: url('https://r1.ilikewallpaper.net/iphone-wallpapers/download/9811/Scripture-iphone-wallpaper-ilikewallpaper_com.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight: bold;
+	}
+
+.page-wrapper{
+	overflow: hidden;
+	display: grid;
+	grid-template-areas: 
+	'header header header'
+	'main main sidebar'
+	;
+	grid-auto-rows: minmax(min-content, max-content);
+	grid-auto-columns: minmax(min-content, max-content);
+	width: 80%;
+	height: 100%;
+	background-image: url('https://r1.ilikewallpaper.net/iphone-wallpapers/download/9811/Scripture-iphone-wallpaper-ilikewallpaper_com.jpg');
+}
+
+header{
+	color: white;
+	height: auto;
+	width: auto;
+	grid-area:header;
+	block-size: fit-content;
+	text-align: justify;
+	white-space: nowrap;
+ 	overflow: hidden;
+  	text-overflow: ellipsis;
+	margin-bottom: 10vw;
+	margin-top: 5vh;
+	transform: rotate(-10deg) translate(5%, 20%);	
+}
+
+header h1,h2{
+	margin-left: 5vw;
+}
+
+.intro{
+	grid-column: span 2;
+	height: fit-content;
+}
+.sidebar{
+	height: fit-content;
+	grid-area:sidebar;
+}
+
+
+.wrapper{
+	display: flex;
+	height: 100%;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	gap: 10vw;
+	margin: 0 1vw 0 1vw;
+	
+
+}
+
+a{
+	color: rgb(70, 195, 254);
+	text-decoration: none;
+}
+
+
+a:hover{
+	color: rgb(250, 3, 3);
+	text-decoration: underline;
+}
+
+p{
+	text-indent: 1vw;
+}
+
+ul li {    
+    list-style: none;
+	margin-bottom: 1vw;
+}
+ul li:before {
+	content: '';
+	background-image: url('resources/bullet-icon.svg');
+	background-size: 100% 100%;
+	padding: 0.5vh 1vw;
+	margin-right:1vw;
+}
+
+h3{
+	padding-top: 4vh;
+	padding-bottom: 2vh;
+}
+
+
+.page-wrapper:after{
+	content: '';
+	background-image: url('resources/logo-icon.svg');
+	background-size: 100% 100%;
+	padding: 0.5vh 1vw;
+	margin-right:1vw;
+}
+
+.summary{
+	text-align: justify;
+	height: auto;
+	border-radius: 10px;
+	color: white;
+
+	padding: 0 1vw 0 1vw;
+	margin-bottom: 5vh;
+}
+
+
+.preamble{
+	text-align: justify;
+	height: auto;
+	color: white;
+	padding: 0 1vw 0 1vw;
+}
+
+.preamble h3:before{
+	content: '';
+	background-image: url('resources/h3-icon1.svg');
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.main.supporting{
+	border-radius: 10px;
+	grid-area: supporting;
+	grid-area: main;
+	padding: 0 1vw 3vw 1vw;
+	height: 100%;
+}
+
+.explanation{
+	text-align: justify;
+	height: auto;
+	color: white;
+	
+}
+
+.explanation h3:before{
+	content: '';
+	background-image: url('resources/h3-icon2.svg');
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+
+.participation{
+	text-align: justify;
+	height: auto;
+	border-radius: 10px;
+	color: white;
+	margin-top: 1vh;
+}
+
+.participation h3:before{
+	content: '';
+	background-image: url('resources/h3-icon3.svg');
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.benefits{
+	text-align: justify;
+	height: auto;
+	border-radius: 10px;
+	color: white;
+	margin-top: 1vh;
+}
+
+.benefits h3:before{
+	content: '';
+	background-image: url('resources/h3-icon4.svg');
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.requirements{
+	text-align: justify;
+	height: auto;
+	border-radius: 10px;
+	color: white;
+	margin-top: 1vh;
+}
+.requirements h3:before{
+	content: '';
+	background-image: url('resources/h3-icon5.svg');
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.design-selection
+{
+	text-align: left;
+	height: auto;
+	border-radius: 10px;
+	grid-area: design;
+	flex-grow: 1;
+	color: rgb(117, 124, 168);
+	
+}
+
+.design-selection h3:before{
+	content: "";
+	background-image: url(resources/sidebar-icon3.svg);
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.design-selection li:before {
+	content: '';
+	background-image: url('resources/bullet-icon3.svg');
+	background-size: 100% 100%;
+	padding: 0.5vh 1vw;
+	margin-right:1vw;
+}
+
+
+.designer-name{
+	color: rgb(245, 112, 112);
+}
+
+.design-archives
+{
+	text-align: justify;
+	height: auto;
+	color: white;
+	order: 1;
+	color: #F2BC0F;
+
+	
+}
+.design-archives h3:before{
+	content: "";
+	background-image: url(resources/sidebar-icon1.svg);
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.design-archives li:before {
+	content: '';
+	background-image: url('resources/bullet-icon1.svg');
+	background-size: 100% 100%;
+	padding: 0.5vh 1vw;
+	margin-right:1vw;
+}
+
+.design-archives a{
+	color: #b5bdff;
+}
+.zen-resources
+{
+	text-align: justify;
+	height: auto;
+	border-radius: 10px;
+	color: white;
+	color: #C6E267;
+	
+}
+
+.zen-resources h3:before{
+	content: "";
+	background-image: url(resources/sidebar-icon2.svg);
+	background-size: 100% 100%;
+	padding: 4vh 4vh;
+	margin-right:1vw;
+}
+
+.zen-resources li:before {
+	content: '';
+	background-image: url('resources/bullet-icon2.svg');
+	background-size: 100% 100%;
+	padding: 0.5vh 1vw;
+	margin-right:1vw;
+}
+
+
+/* footer has to be at the bottom of the page, not stick 
+to the bottom of the visible page */
+footer{
+	/* position: fixed; */
+	left:0;
+	bottom: 0;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 7vh;
+	color: white;
+	text-align: center;
+	top: 1vw;
+	margin-top: 10vh;
+}
+
+/* replacing the text with icons on the navigation bar */
+
+.zen-validate-html, .zen-validate-css, .zen-license, 
+.zen-accessibility, .zen-github {
+	font-size: 0;
+	width: 5vw;
+	height: 5vw;;
+	color: white;
+	opacity: 0.7
+}
+
+.zen-validate-html:hover, .zen-validate-css:hover, .zen-license:hover,
+.zen-accessibility:hover, .zen-github:hover{
+	opacity: 1;
+}
+
+.zen-validate-html:after{
+	content:'';
+	visibility: visible;
+	display:inline-block;
+	margin: 0 auto;
+    background: url("resources/html-logo.svg") no-repeat;
+    width: inherit;
+    height: inherit;
+}
+
+.zen-validate-html:hover:after{
+	content: '';
+	background: url("resources/html2.svg") no-repeat;
+}
+
+.zen-validate-css:after{
+	content:'';
+	visibility: visible;
+	display:inline-block;
+	margin: 0 auto;
+    background: url("resources/css-logo.svg") no-repeat;
+	width: inherit;
+    height: inherit;
+}
+
+.zen-validate-css:hover:after{
+	content: '';
+	background: url("resources/css2.svg") no-repeat;
+}
+
+.zen-license:after{
+	content:'';
+	visibility: visible;
+	display:inline-block;
+	margin: 0 auto;
+    background: url("resources/cc2.svg") no-repeat;
+	width: inherit;
+    height: inherit;
+}
+
+.zen-license:hover:after{
+	content: '';
+	background: url("resources/license-logo.svg") no-repeat;
+}
+
+.zen-accessibility:after{
+	content:'';
+	visibility: visible;
+	display:inline-block;
+	margin: 0 auto;
+    background: url("resources/wheelchair2.svg") no-repeat;
+	width: inherit;
+    height: inherit;
+}
+
+.zen-accessibility:hover:after{
+	content: '';
+	background: url("resources/acces-logo.svg") no-repeat;
+}
+
+.zen-github:after{
+	content:'';
+	visibility: visible;
+	display:inline-block;
+	margin: 0 auto;
+    background: url("resources/github-logo.svg") no-repeat;
+	width: inherit;
+    height: inherit;;
+}
+
+.zen-github:hover:after{
+	content: '';
+	background: url("resources/github-logo2.svg") no-repeat;
+}
+
+
+/* sidebar costumisation */
+
+
+@media only screen and (max-width: 800px){
+	.page-wrapper{
+		display: block;
+	}
+	.sidebar{
+		grid-column: 1;
+		grid-row: 3;
+		margin-bottom: 7vh;
+	}
+}
